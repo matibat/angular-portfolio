@@ -1,19 +1,28 @@
 <div class="app">
-  <div class="navigation-bar">
-    <img src="" alt="logo">
-  </div>
+  <table class="navigation-bar">
+    <tbody>
+      <tr>
+        <td class="logo">
+          <img src="" alt="logo">
+        </td>
+        <td class="navigation-links">
+          <ul class="menu">
+            <li class="menu-item">
+              <a [routerLink]="['/']" routerLinkActive="active"> HOME </a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
   <div class="content">
-    <div class="arrow-button left">
-      <span class="label">&lt;</span>
-    </div>
-    <div class="scene">
 
+    <div class="scene">
+      <router-outlet></router-outlet>
     </div>
-    <div class="arrow-button right">
-      <span class="label">&gt;</span>
-    </div>
+
   </div>
   <div class="footer">
-
+    <span class="clock"> {{ time }} </span>
   </div>
 </div>
