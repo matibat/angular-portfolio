@@ -15,14 +15,19 @@
       </tr>
     </tbody>
   </table>
-  <div class="content">
-
-    <div class="scene">
+  <div class="tab-wrapper">
+    <!-- <div class="displayr">
       <router-outlet></router-outlet>
-    </div>
-
+    </div> -->
+    <mat-tab-group disableRipple>
+      <mat-tab label="Home">
+        <div *ngFor="let page of config.pages" class="content">
+            <app-home-component></app-home-component>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
   </div>
   <div class="footer">
-    <span class="clock"> {{ time }} </span>
+    <app-clock-component></app-clock-component>
   </div>
 </div>
