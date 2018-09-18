@@ -5,7 +5,7 @@ import { Injectable, Component } from '@angular/core';
   providedIn: 'root',
 })
 export class Config {
-  pages = [
-    GalleryComponent
-  ];
+  pages = {
+    'gallery-component': GalleryComponent
+  };
 }

@@ -1,29 +1,14 @@
 <div class="app">
-  <table class="navigation-bar">
-    <tbody>
-      <tr>
-        <td class="logo">
-          <img src="" alt="logo">
-        </td>
-        <td class="navigation-links">
-          <ul class="menu">
-            <li class="menu-item">
-              <a [routerLink]="['/']" routerLinkActive="active"> HOME </a>
-            </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
   <div class="tab-wrapper">
     <!-- <div class="displayr">
       <router-outlet></router-outlet>
     </div> -->
-    <mat-tab-group disableRipple>
+    <mat-tab-group disableRipple appDisplayr>
       <mat-tab label="Home">
-        <div *ngFor="let page of config.pages" class="content">
-            <app-home-component></app-home-component>
-        </div>
+        <app-home-component></app-home-component>
+      </mat-tab>
+      <mat-tab label="Gallery">
+        <app-gallery></app-gallery>
       </mat-tab>
     </mat-tab-group>
   </div>

@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { Config } from './app.config';
+// import { DisplayrComponent } from './displayr.component';
+import { DisplayrDirective } from './displayr.directive';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent}
@@ -19,7 +21,9 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     ClockComponent,
-    GalleryComponent
+    GalleryComponent,
+    // DisplayrComponent,
+    DisplayrDirective,
   ],
   imports: [
     BrowserModule,
