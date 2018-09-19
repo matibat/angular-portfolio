@@ -49,11 +49,13 @@
     justify-content: flex-end;
     align-items: center;
     height: 1.5rem;
-    background-color: #22beee;
+    background-color: #574728;
     color: white;
 
     .clock {
-      width: 6rem;
+      display: flex;
+      width: 6.5rem;
+      justify-content: flex-start;
     }
   }
 }

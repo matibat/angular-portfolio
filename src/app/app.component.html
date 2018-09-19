@@ -3,12 +3,19 @@
     <!-- <div class="displayr">
       <router-outlet></router-outlet>
     </div> -->
-    <mat-tab-group disableRipple appDisplayr>
+    <div class="header-styler">
+      <img src="assets/img/pirat.png" class="icon" />
+    </div>
+    <mat-tab-group disableRipple>
       <mat-tab label="Home">
-        <app-home-component></app-home-component>
+        <div class="map-container">
+          <app-home-component></app-home-component>
+        </div>
       </mat-tab>
       <mat-tab label="Gallery">
-        <app-gallery></app-gallery>
+        <div class="map-container">
+          <app-gallery></app-gallery>
+        </div>
       </mat-tab>
     </mat-tab-group>
   </div>
