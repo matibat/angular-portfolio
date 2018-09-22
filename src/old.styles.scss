@@ -4,7 +4,6 @@
 
 body {
   margin: 0;
-  font-family: Helvetica;
 }
 
 /* mat-tabs fixes here */
@@ -21,6 +20,9 @@ body {
 
 .mat-tab-header {
   height: 4rem;
+  border-style: solid;
+  border-width: 0 0 .3rem 0;
+  border-color: #574728;
 
   .mat-tab-labels {
     display: flex;
@@ -33,45 +35,29 @@ body {
     .mat-tab-label {
       border-style: groove;
       border-width: 0 0 0 0;
-      color: #fff8fb;
-      border-color: #e0e0e0;
-      opacity: 1;
-      font-weight: 900;
-      letter-spacing: .093rem;
+      border-color: white;
     }
 
     & :not(:first-child) {
-      border-width: 0 0 0 .062rem;
+      border-width: 0 0 0 1px;
     }
   }
 }
 
 .header-styler {
-  // background-image: url("assets/img/dark-wood-texture.png");
-  display: flex;
+  background-image: url("assets/img/dark-wood-texture.png");
   position: absolute;
   z-index: 0;
   left: 0;
   height: 4rem;
   width: 100%;
-  align-items: center;
-  padding-left: 1rem;
-  // border-style: solid;
-  // border-width: 0 0 .062rem 0;
-  // border-color: #f3afbc;
-  filter: drop-shadow(0 -1rem .9rem #616161);
-  background-color: #fde9f2;
 
   .icon {
     // display: none;
-    // height: 3rem;
-    // margin: .5rem;
-    // color: #ffa9ea;
-    color: #fff8fb;
-    font-family: monospace;
-    font-size: 3rem;
-    // image-rendering: pixelated;
-    // filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px 1px 0 white);
+    height: 3rem;
+    margin: .5rem;
+    image-rendering: pixelated;
+    filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px 1px 0 white);
   }
 }
 
@@ -80,41 +66,36 @@ body {
   align-items: center;
   justify-content: center;
   // background-color: #b8a678;
-  // background-image: url("assets/img/map.png");
-  // background-repeat: no-repeat;
-  // background-size: 100% 100%;
+  background-image: url("assets/img/map.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   height: 100%;
   box-sizing: border-box; // avoid for padding to resize container
   display: flex;
   align-self: flex-start;
 
   & >::after {
-    content: "";
     position: fixed;
     z-index: -1;
+    content: "";
     height: 100vh;
     width: 100%;
     top: 4.3rem;
     left: 0;
-    // background-image: url("assets/img/awa.jpeg");
+    background-image: url("assets/img/awa.jpeg");
   }
 
   .map-container {
     position: relative;
-    height: 100%;
+    height: 60%;
     width: 65%;
   }
 }
 
 .footer {
-  background-color: #fde9f2;
-  border-top-style: solid;
-  border-color: #e0e0e0;
-  border-width: .093rem;
   .clock {
     display: flex;
-    width: 7rem;
+    width: 6rem;
     justify-content: flex-start;
-    letter-spacing: .062rem;
   }
 }
