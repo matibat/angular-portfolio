@@ -1,0 +1,30 @@
+/* theme colorize */
+
+@mixin set-theme-color($base-color) {
+  .mat-tab-header {
+    .mat-tab-labels {
+      .mat-tab-label {
+        color: #fff8fb;
+        border-color: #fff8fb;
+        color: lighten($base-color, 50%);
+        border-color: lighten($base-color, 50%);
+      }
+    }
+  }
+
+  .header-styler {
+    background-color: #fde9f2;
+    background-color: lighten($base-color, 30%);
+
+    .icon {
+      color: #fff8fb;
+      color: lighten($base-color, 50%);
+    }
+  }
+
+  .footer {
+    background-color: #fde9f2;
+    border-color: #e0e0e0;
+    background-color: lighten($base-color, 30%);
+  }
+}

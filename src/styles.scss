@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import './variables.scss';
+@import './theme.scss';
+
 /* body margin fix here */
 
 body {
   margin: 0;
   font-family: Helvetica;
+  color: #525252;
 }
 
 /* mat-tabs fixes here */
@@ -17,10 +21,11 @@ body {
   height: 100%;
 }
 
-/* pirate-inspired style here */
+/* simplist style here */
 
 .mat-tab-header {
   height: 4rem;
+  padding-left: 9.5rem;
 
   .mat-tab-labels {
     display: flex;
@@ -28,16 +33,16 @@ body {
     flex-flow: row;
     justify-content: flex-end;
     align-items: center;
-    padding-left: 5rem;
 
     .mat-tab-label {
-      border-style: groove;
+      border-style: solid;
       border-width: 0 0 0 0;
       color: #fff8fb;
-      border-color: #e0e0e0;
+      border-color: #fff8fb;
       opacity: 1;
       font-weight: 900;
       letter-spacing: .093rem;
+      filter: drop-shadow($shadow-emphasis);
     }
 
     & :not(:first-child) {
@@ -59,7 +64,7 @@ body {
   // border-style: solid;
   // border-width: 0 0 .062rem 0;
   // border-color: #f3afbc;
-  filter: drop-shadow(0 -1rem .9rem #616161);
+  filter: drop-shadow(0 -1rem 1rem #525252);
   background-color: #fde9f2;
 
   .icon {
@@ -70,6 +75,7 @@ body {
     color: #fff8fb;
     font-family: monospace;
     font-size: 3rem;
+    filter: drop-shadow($shadow-emphasis);
     // image-rendering: pixelated;
     // filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px 1px 0 white);
   }
@@ -116,5 +122,10 @@ body {
     width: 7rem;
     justify-content: flex-start;
     letter-spacing: .062rem;
+    filter: drop-shadow($shadow-emphasis);
   }
+}
+
+.pink-theme {
+  @include set-theme-color(#ff4096);
 }
