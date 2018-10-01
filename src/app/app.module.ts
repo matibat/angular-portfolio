@@ -11,6 +11,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { Config } from './app.config';
 // import { DisplayrComponent } from './displayr.component';
 import { DisplayrDirective } from './displayr.directive';
+import { ThemeService } from './theme.service';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent}
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     )
   ],
   providers: [
-    Config
+    Config,
+    ThemeService
   ],
   bootstrap: [AppComponent]
 })
