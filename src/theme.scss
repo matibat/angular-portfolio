@@ -26,5 +26,15 @@
     background-color: #fde9f2;
     border-color: #e0e0e0;
     background-color: lighten($base-color, 30%);
+
+    .color-picker-selected-color {
+      background-color: $base-color;
+    }
+
+    .color-picker-pallete {
+      .color-picker-header {
+        background-color: lighten($base-color, 30%);
+      }
+    }
   }
 }

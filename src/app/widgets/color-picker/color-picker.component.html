@@ -1,0 +1,14 @@
+<div class="color-picker">
+  <div (click)="toggleVisibility()" class="color-picker-selected-color"></div>
+  <div [ngClass]="{'color-picker-pallete': true, 'isHidden': !isPalleteVisible}">
+    <div class="color-picker-header">
+      <h3> {{title}} </h3>
+    </div>
+    <div class="color-picker-samples-wrapper">
+      <div class="color-picker-samples">
+        <div *ngFor="let color of colors" [ngClass]="[color, 'color-picker-sample']">
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

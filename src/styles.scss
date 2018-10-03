@@ -94,17 +94,6 @@ body {
   display: flex;
   align-self: flex-start;
 
-  & >::after {
-    content: "";
-    position: fixed;
-    z-index: -1;
-    height: 100vh;
-    width: 100%;
-    top: 4.3rem;
-    left: 0;
-    // background-image: url("assets/img/awa.jpeg");
-  }
-
   .map-container {
     position: relative;
     height: 100%;
@@ -117,6 +106,7 @@ body {
   border-top-style: solid;
   border-color: #e0e0e0;
   border-width: .093rem;
+
   .clock {
     display: flex;
     width: 7rem;
@@ -127,5 +117,5 @@ body {
 }
 
 .pink-theme {
-  @include set-theme-color(#ff4096);
+  @include set-theme-color($pink);
 }
