@@ -19,6 +19,10 @@ body {
 
 .mat-tab-body-wrapper {
   height: 100%;
+
+  .mat-tab-body.mat-tab-body-active {
+    z-index: 0;
+  }
 }
 
 /* simplist style here */
@@ -118,4 +122,16 @@ body {
 
 .pink-theme {
   @include set-theme-color($pink);
+}
+
+.red-theme {
+  @include set-theme-color($red);
+}
+
+.green-theme {
+  @include set-theme-color($green);
+}
+
+.blue-theme {
+  @include set-theme-color($blue);
 }

@@ -6,9 +6,12 @@
     </div>
     <div class="color-picker-samples-wrapper">
       <div class="color-picker-samples">
-        <div *ngFor="let color of colors" [ngClass]="[color, 'color-picker-sample']">
+        <div
+          *ngFor="let color of colors"
+          [ngClass]="[color, 'color-picker-sample']"
+          (click)="selectTheme(color)"
+        > </div>
       </div>
-    </div>
     </div>
   </div>
 </div>

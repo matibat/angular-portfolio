@@ -1,3 +1,4 @@
+import { ThemeService } from './../../theme.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,7 +11,7 @@ export class ColorPickerComponent implements OnInit {
   public colors = ['pink', 'red', 'green', 'blue'];
   public isPalleteVisible = false;
 
-  constructor() { }
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit() {
   }
@@ -18,5 +19,10 @@ export class ColorPickerComponent implements OnInit {
   toggleVisibility() {
     console.log('[ColorPickerComponent.toggleVisibility()] Visibility changed');
     this.isPalleteVisible = !this.isPalleteVisible;
+  }
+
+  selectTheme(theme: string) {
+    console.log('[ColorPicker.selectTheme()] Theme ' + theme + ' selected');
+    this.themeService.changeTheme(theme);
   }
 }

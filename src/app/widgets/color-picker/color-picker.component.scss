@@ -21,6 +21,7 @@
     align-items: center;
     background-color: white;
     filter: drop-shadow($shadow-big-emphasis);
+    overflow: hidden;
 
     .color-picker-header {
       display: flex;
@@ -39,6 +40,7 @@
       display: flex;
       align-items: center;
       height: fill-available;
+      z-index: 2;
 
       .color-picker-samples {
         display: flex;
@@ -51,24 +53,23 @@
           width: 4.5rem;
           height: 4.5rem;
           justify-content: space-around;
-
-          // margin fix
-          margin: 0 !important;
+          border-radius: 1.5rem;
+          filter: drop-shadow($shadow-emphasis);
 
           &.pink {
-            background-color: $pink;
+            background-color: lighten($pink, 30%);
           }
 
           &.red {
-            background-color: $red;
+            background-color: lighten($red, 30%);
           }
 
           &.green {
-            background-color: $green;
+            background-color: lighten($green, 30%);
           }
 
           &.blue {
-            background-color: $blue;
+            background-color: lighten($blue, 30%);
           }
         }
       }
