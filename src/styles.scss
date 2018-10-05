@@ -119,19 +119,3 @@ body {
     filter: drop-shadow($shadow-emphasis);
   }
 }
-
-.pink-theme {
-  @include set-theme-color($pink);
-}
-
-.red-theme {
-  @include set-theme-color($red);
-}
-
-.green-theme {
-  @include set-theme-color($green);
-}
-
-.blue-theme {
-  @include set-theme-color($blue);
-}

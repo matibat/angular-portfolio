@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule } from '@angular/material';
+import { MatTabsModule, MatDialogModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -13,6 +13,7 @@ import { Config } from './app.config';
 import { DisplayrDirective } from './displayr.directive';
 import { ThemeService } from './theme.service';
 import { ColorPickerComponent } from './widgets/color-picker/color-picker.component';
+import { ColorPickerPalleteComponent } from './widgets/color-picker/color-picker-pallete/color-picker-pallete.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent}
@@ -27,11 +28,13 @@ const appRoutes: Routes = [
     // DisplayrComponent,
     DisplayrDirective,
     ColorPickerComponent,
+    ColorPickerPalleteComponent,
   ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
     MatTabsModule,
+    MatDialogModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }

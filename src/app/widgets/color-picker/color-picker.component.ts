@@ -14,6 +14,7 @@ export class ColorPickerComponent implements OnInit {
   constructor(private themeService: ThemeService) { }
 
   ngOnInit() {
+
   }
 
   toggleVisibility() {
